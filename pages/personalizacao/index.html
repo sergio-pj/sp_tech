@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Configurador de Projeto | S.P. Tech Solutions</title>
+    <link rel="stylesheet" href="../../style.css"> <link rel="stylesheet" href="estilo.css">      
+    <link rel="icon" type="image/png" href="../../assets/img/logop_Sfundo - site.png">
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="../../assets/img/logop_Sfundo.png" alt="S.P. Tech Solutions Logo" class="logo-img">
+                <span class="logo-text">S.P. <small>TECH SOLUTIONS</small></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../index.html" class="active">Home</a></li>
+                <li><a href="../sobre/index.html">Sobre</a></li>
+                <li><a href="../servicos/index.html">Serviços</a></li>
+                <li><a href="../contato/index.html">Contato</a></li>
+                <li><a href="pages/personalizacao/index.html">Personalização</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container-configurador">
+        <section class="painel-opcoes">
+    <h1>Configure seu <span class="highlight">Projeto</span></h1>
+    <p>Personalize cada detalhe da sua solução digital.</p>
+
+    <form id="form-projeto">
+        <div class="step">
+            <label>Qual o ramo do seu negócio?</label>
+            <select id="ramo" required onchange="atualizarPreviewRamo()">
+                <option value="">Selecione...</option>
+                <option value="Petshop">Petshop 🐾</option>
+                <option value="Mercadinho">Mercadinho / Mercearia 🛒</option>
+                <option value="Roupas">Loja de Roupas 👕</option>
+                <option value="Tecnologia">Tecnologia / TI 💻</option>
+                <option value="Outro">Outro</option>
+            </select>
+        </div>
+
+        <div class="step">
+    <label>Qual o seu objetivo principal?</label>
+    <div class="options-grid">
+        <input type="radio" name="tipo" value="Site Vitrine" id="lp" onclick="atualizarTipo('Site Vitrine')">
+        <label for="lp">
+            <span class="icon">🌐</span>
+            <strong>Ter presença na Internet</strong>
+            <small>Um site para ser encontrado no Google e passar confiança.</small>
+        </label>
+                
+                <input type="radio" name="tipo" value="Sistema de Vendas" id="sis" onclick="atualizarTipo('Sistema de Vendas')">
+        <label for="sis">
+            <span class="icon">📊</span>
+            <strong>Organizar minhas Vendas</strong>
+            <small>Sistema para controlar pedidos, estoque ou agendamentos.</small>
+        </label>
+    </div>
+</div>
+
+        <div class="step">
+            <label>Funcionalidades indispensáveis:</label>
+            <div class="checkbox-grid">
+                <div class="check-item">
+                    <input type="checkbox" id="f-login" value="Login">
+                    <label for="f-login">Área de Login</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox" id="f-pag" value="Pagamentos">
+                    <label for="f-pag">Pagamentos Online</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox" id="f-chat" value="Chat">
+                    <label for="f-chat">Chat em Tempo Real</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <label>Cores de preferência:</label>
+            <div class="color-picker-group">
+                <input type="text" id="cores" placeholder="Ex: Azul e Branco..." oninput="mudarCorPreview()">
+                <small>As cores aparecerão no preview ao lado.</small>
+            </div>
+        </div>
+
+        <button type="button" onclick="enviarWhatsApp()" class="btn btn-primary">
+            Solicitar Orçamento Personalizado
+        </button>
+    </form>
+</section>
+
+        <section class="painel-visual">
+    <div class="device-wrapper" id="container-device" onclick="alternarDispositivo()">
+        <img src="../../assets/img/monitor_fundoB.png" id="img-dispositivo" alt="Mockup Visual">
+        
+        <div id="tela-interna" class="modo-monitor">
+            <p id="preview-label">Seu Projeto</p>
+
+            <div class="skeleton-visual">
+                <div class="ske-circle" id="ske-main-color"></div>
+        
+                <div class="skeleton-features" id="ske-features-container">
+                    <div class="ske-line" id="ske-login" style="display: none;"></div>
+                    <div class="ske-line" id="ske-pagamento" style="display: none;"></div>
+                    <div class="ske-line" id="ske-chat" style="display: none;"></div>
+                </div>
+        
+            <div class="ske-line short"></div>
+        </div>
+    </div>
+        
+        <div class="hint-click">Clique no aparelho para alternar (PC/Celular)</div>
+    </div>
+</section>
+    </div>
+
+    <script src="engine.js"></script>
+</body>
+</html>

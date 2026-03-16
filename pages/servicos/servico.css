@@ -1,0 +1,145 @@
+.servicos-header {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.servicos-grid {
+    display: grid;
+    /* Altera o tamanho mínimo dos cards para 280px para ficarem mais proporcionais ao header */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+    max-width: 1100px; /* Impede que o grid fique muito largo em telas gigantes */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Base dos Cards (Tamanho Ajustado) --- */
+.servico-card {
+    background: #111;
+    border: 1px solid #333;
+    padding: 30px; /* Reduzimos um pouco o padding para diminuir a altura */
+    border-radius: 12px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Adicionado box-shadow */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Garante que os cards tenham a mesma altura */
+}
+
+.servico-card:hover {
+    transform: translateY(-8px) scale(1.02); /* Movimento mais sutil */
+    border-color: var(--dourado);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2); /* O Brilho sutil */
+}
+
+/* Card em Destaque */
+.servico-card.featured {
+    border: 1px solid var(--dourado);
+    background: linear-gradient(145deg, #111 0%, #1a1a1a 100%);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+}
+
+.servico-card .icon {
+    font-size: 2.5rem; /* Compactamos o ícone */
+    margin-bottom: 15px;
+}
+
+.servico-card h3 {
+    color: var(--dourado);
+    margin-bottom: 10px;
+    font-size: 1.3rem; /* Título um pouco menor */
+}
+
+.servico-card p {
+    color: #ccc;
+    font-size: 0.9rem; /* Texto de apoio menor */
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.servico-card.featured {
+    border: 1px solid var(--dourado);
+    background: linear-gradient(145deg, #111 0%, #1a1a1a 100%);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+}
+
+.servico-card.featured:hover {
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3); /* Destaque maior ao hover */
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin-top: auto;
+}
+
+.features li {
+    color: #fff;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.features li::before {
+    content: "✓";
+    color: var(--dourado);
+    font-weight: bold;
+}
+
+.cta-servicos {
+    display: flex;
+    flex-direction: row; /* Coloca um ao lado do outro */
+    align-items: center;
+    justify-content: space-between; /* Empurra o texto para a esquerda e o botão para a direita */
+    text-align: left; /* Alinha o texto à esquerda */
+    padding: 60px 50px; /* Aumenta o respiro lateral */
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0%, rgba(212, 175, 55, 0.02) 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    margin-top: 40px;
+}
+
+.cta-servicos h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    max-width: 500px; /* Evita que o texto ocupe a tela toda */
+}
+
+/* Ajuste do Botão para não esticar */
+.cta-servicos .btn-primary {
+    white-space: nowrap; /* Impede o texto do botão de quebrar linha */
+    padding: 15px 35px;
+    height: fit-content;
+}
+
+@media (max-width: 768px) {
+    .cta-servicos {
+        flex-direction: column; /* No celular, volta a ficar um sobre o outro */
+        text-align: center;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+    
+    .cta-servicos h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animação de Pulso */
+@keyframes pulse-gold {
+    0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+.cta-servicos .btn-primary {
+    animation: pulse-gold 2s infinite;
+    transition: transform 0.3s ease;
+}
+
+.cta-servicos .btn-primary:hover {
+    transform: scale(1.05);
+    animation: none; /* Para o pulso ao interagir */
+}

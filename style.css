@@ -1,0 +1,189 @@
+/* Variáveis para facilitar a manutenção */
+:root {
+    --preto-fosco: #121212;
+    --preto-card: #1e1e1e;
+    --dourado: #d4af37;
+    --dourado-hover: #f4cf6d;
+    --branco-texto: #e0e0e0;
+    --cinza-suave: #888;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--preto-fosco);
+    color: var(--branco-texto);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Navegação */
+/* Importando uma fonte mais sofisticada (opcional, mas recomendado) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+header {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 0.8rem 0; /* Header mais fino = mais elegante */
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Reduzi o max-width para os itens não ficarem "fugindo" tanto para as bordas */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 60px; /* Aumentei um pouco como você pediu */
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.1); /* Leve interação ao passar o mouse */
+}
+
+.logo-text {
+    /* Fonte Robusta e Moderna */
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 800; /* Bem negrito */
+    font-size: 1.2rem;
+    color: #FFD700; /* Dourado Vivo */
+    text-transform: uppercase;
+    letter-spacing: 4px; /* Espaço entre letras para preencher o visual */
+    margin-left: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px; /* Espaço entre os links */
+}
+
+.nav-links a.active {
+    color: #FFD700;
+    border: 1px solid #FFD700;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+.nav-links a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Efeito de linha que surge embaixo do link */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--dourado);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--dourado);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Seção Hero */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.highlight {
+    color: var(--dourado);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--cinza-suave);
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+}
+
+/* Botões */
+.cta-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.btn-primary {
+    background-color: var(--dourado);
+    color: black;
+}
+
+.btn-primary:hover {
+    background-color: var(--dourado-hover);
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    border: 1px solid var(--dourado);
+    color: var(--dourado);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+/* Rodapé */
+footer {
+    padding: 40px 0;
+    border-top: 1px solid #333;
+    text-align: center;
+    color: var(--cinza-suave);
+    font-size: 0.9rem;
+}
