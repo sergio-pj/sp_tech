@@ -1,5 +1,5 @@
 .sobre-container {
-    padding: 80px 20px;
+    padding-top: 50px; /* Reduzimos o padding superior para subir todo o conteúdo */
 }
 
 .sobre-hero {
@@ -24,21 +24,65 @@
 }
 
 .sobre-detalhes {
+    margin-top: -30px; /* Margem negativa sutil para "puxar" os quadros para cima */
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Mantém responsivo */
     gap: 30px;
+    margin-bottom: 60px; /* Espaço para o Stack Tecnológico */
 }
 
 .card-sobre {
-    background: #0a0a0a;
-    padding: 40px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: #0a0a0a; /* Fundo escuro premium */
+    padding: 30px;
+    border-radius: 12px; /* Cantos arredondados consistentes */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Borda sutil */
+    height: 100%; /* Garante mesma altura */
 }
 
 .card-sobre h3 {
     color: var(--dourado);
     margin-bottom: 15px;
+}
+
+.tecnologias {
+    margin-top: 0; /* Remove margem superior excessiva */
+    text-align: center; /* Centraliza o título */
+    width: 100%; /* Garante que ocupa a largura total */
+}
+
+.tecnologias h2 {
+    margin-bottom: 25px; /* Espaço até os ícones */
+}
+
+.tech-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    justify-content: center; /* Centraliza horizontalmente o grupo de ícones */
+    gap: 15px; /* Espaçamento entre os ícones */
+    max-width: 800px; /* Limita a largura para centralizar melhor */
+    margin-left: auto; /* Centraliza o container em si */
+    margin-right: auto;
+    margin-bottom: 60px; /* Espaço inferior */
+}
+
+.tech-item {
+    background: #111;
+    border: 1px solid #333;
+    padding: 12px 20px;
+    border-radius: 50px; /* Formato pílula */
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: flex; /* Para alinhar o ícone se houver */
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.tech-item:hover {
+    border-color: var(--dourado);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+    transform: translateY(-5px);
 }
 
 /* Reutilizando a animação que já discutimos */

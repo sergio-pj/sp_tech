@@ -187,3 +187,186 @@ footer {
     color: var(--cinza-suave);
     font-size: 0.9rem;
 }
+
+/* --- AJUSTES DE RESPONSIVIDADE (MOBILE) --- */
+
+/* 1. Proteção Global contra vazamento */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Impede o scroll lateral que desloca a tela */
+}
+
+/* 2. Media Query para Celulares (até 768px) */
+@media (max-width: 768px) {
+    
+    /* Header & Navegação */
+    nav {
+        flex-direction: column; /* Coloca a logo em cima e o menu embaixo */
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    body {
+        position: relative; /* Fundamental para o pseudo-elemento funcionar */
+    }
+
+    body::before {
+        content: '';
+        position: fixed; /* Fixa no fundo enquanto rola */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%; /* Logo bem grande e impactante */
+        height: 90%;
+        background-image: url('assets/img/logop_Sfundo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.1; /* Bem sutil para não atrapalhar a leitura */
+        z-index: -1; /* Fica atrás de tudo */
+        pointer-events: none; /* Não interfere nos cliques */
+    }
+
+    .hero-content img {
+        display: none !important; /* Esconde a imagem central para mobile */
+    }
+
+    /* --- Outros Ajustes Necessários (já discutidos) --- */
+    h1 {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .hero img, .sobre-container img { 
+        display: none !important; 
+    }
+
+    .hero-content, .sobre-detalhes {
+        margin-top: 20px;
+        padding: 0 20px;
+    }
+
+    .logo-text {
+        font-size: 1rem; /* Diminui o texto da logo no celular */
+        letter-spacing: 2px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap; /* Se os links forem muitos, eles quebram linha suavemente */
+        justify-content: center;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .nav-links li {
+        list-style: none;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem; /* Diminui um pouco o texto para caber melhor */
+        letter-spacing: 1px;
+    }
+
+    .logo {
+        margin-bottom: 5px;
+    }
+    
+    .logo-img {
+        height: 50px; /* Reduz levemente para ganhar espaço vertical */
+    }
+
+    /* Hero Section (A parte que estava saindo da tela) */
+    .hero {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem; /* Diminuído para caber na largura do celular */
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Botões */
+    .cta-group {
+        flex-direction: column; /* Botões um em cima do outro */
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .btn {
+        width: 100%; /* Botão ocupa a largura total disponível */
+        text-align: center;
+    }
+    .contato-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    /* 2. Organizando os Cards de E-mail e WhatsApp */
+    /* Em vez de uma lista vertical simples, vamos deixá-los mais compactos */
+    .contato-info {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr; /* Um por linha, mas com design de card */
+        gap: 15px;
+    }
+
+    .info-item {
+        background: rgba(255, 255, 255, 0.05); /* Fundo sutil */
+        padding: 15px;
+        border-radius: 12px;
+        border: 1px solid rgba(212, 175, 55, 0.3); /* Bordas douradas suaves */
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .info-item .icon {
+        font-size: 1.5rem;
+    }
+
+    .info-item div p {
+        font-size: 0.8rem; /* Diminui o texto longo para não quebrar a tela */
+        word-break: break-all; /* Garante que o e-mail não "fuja" da tela */
+    }
+
+    /* 3. Ajuste do Formulário */
+    .contato-form {
+        width: 100%;
+        max-width: 100%;
+        padding: 25px;
+        background: #111; /* Cor sólida para destacar do fundo transparente */
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .contato-form h2 {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Fazendo o botão de enviar ocupar a largura toda */
+    .btn-enviar {
+        width: 100%;
+        padding: 15px;
+        font-weight: bold;
+    }
+}

@@ -66,15 +66,16 @@ select:focus, input[type="text"]:focus {
 }
 
 .options-grid label {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 10px;
+    display: block;
     background: #111;
     border: 1px solid #333;
-    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
+    text-transform: none;
+    font-size: 0.9rem;
 }
 
 .options-grid label .icon {
@@ -137,7 +138,6 @@ select:focus, input[type="text"]:focus {
     height: auto;
     display: block;
     filter: drop-shadow(0 20px 50px rgba(0,0,0,0.8));
-    border-radius: 10px;
 }
 
 /* --- TELA INTERNA (A MÁGICA ACONTECE AQUI) --- */
@@ -318,4 +318,51 @@ select:focus, input[type="text"]:focus {
     margin-top: 5px;
     color: #888;
     font-size: 0.7rem;
+}
+
+/* No seu arquivo de estilo da página de personalização */
+
+/* --- AJUSTE PARA CELULAR (VAI ESCONDER O MONITOR E CENTRALIZAR O FORM) --- */
+/* --- AJUSTE PARA CELULAR --- */
+@media (max-width: 768px) {
+    
+    /* 1. Esconde o monitor/mockup completamente */
+    .painel-visual { 
+        display: none !important; 
+    }
+
+    /* 2. Ajusta o container para empilhar os elementos */
+    .container-configurador {
+        flex-direction: column;
+        padding: 20px 15px;
+        gap: 0; /* Remove o espaço que era para o monitor */
+        min-height: auto;
+    }
+
+    /* 3. Faz o formulário ocupar a tela toda */
+    .painel-opcoes {
+        width: 100%;
+        max-width: 100%;
+        flex: none;
+    }
+
+    /* 4. Título e parágrafo centralizados para mobile */
+    .painel-opcoes h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .painel-opcoes p {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    /* 5. Ajusta os cards de "Presença" e "Vendas" para ficarem um sob o outro */
+    .options-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    #form-projeto {
+        padding: 25px 20px;
+    }
 }

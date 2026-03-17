@@ -52,24 +52,25 @@
             </div>
         </div>
 
-        <form class="contato-form">
-            <div class="input-group">
-                <label>Seu Nome</label>
-                <input type="text" placeholder="Ex: Sérgio Almeida" required>
-            </div>
-            
-            <div class="input-group">
-                <label>E-mail ou WhatsApp</label>
-                <input type="text" placeholder="Como prefere ser contatado?" required>
-            </div>
-            
-            <div class="input-group">
-                <label>Sua Mensagem</label>
-                <textarea rows="5" placeholder="Conte um pouco sobre seu projeto..."></textarea>
-            </div>
-            
-            <button type="submit" class="btn-submit">Enviar Mensagem</button>
-        </form>
+        <form class="contato-form" action="https://formspree.io/f/mwvrwope" method="POST">
+    
+    <div class="input-group">
+        <label>Seu Nome</label>
+        <input type="text" name="nome" placeholder="Ex: Sérgio Almeida" required>
+    </div>
+    
+    <div class="input-group">
+        <label>E-mail ou WhatsApp</label>
+        <input type="text" name="contato" placeholder="Como prefere ser contatado?" required>
+    </div>
+    
+    <div class="input-group">
+        <label>Sua Mensagem</label>
+        <textarea name="mensagem" rows="5" placeholder="Conte um pouco sobre seu projeto..."></textarea>
+    </div>
+    
+    <button type="submit" class="btn-submit">Enviar Mensagem</button>
+</form>
 
     </div>
 </main>
