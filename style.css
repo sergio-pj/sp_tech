@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;500;600;700;800&display=swap');
+
 /* Variáveis para facilitar a manutenção */
 :root {
     --preto-fosco: #121212;
     --preto-card: #1e1e1e;
+    --preto-profundo: #050505;
     --dourado: #d4af37;
     --dourado-hover: #f4cf6d;
     --branco-texto: #e0e0e0;
     --cinza-suave: #888;
+    --cinza-borda: rgba(212, 175, 55, 0.16);
 }
 
 * {
@@ -15,10 +19,13 @@
 }
 
 body {
-    background-color: var(--preto-fosco);
+    background:
+        radial-gradient(circle at top, rgba(212, 175, 55, 0.12), transparent 32%),
+        linear-gradient(180deg, #0b0b0b 0%, var(--preto-profundo) 100%);
     color: var(--branco-texto);
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
+    min-height: 100vh;
 }
 
 .container {
@@ -27,9 +34,17 @@ body {
     padding: 0 20px;
 }
 
+.eyebrow {
+    color: var(--dourado-hover);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
 /* Header & Navegação */
 /* Importando uma fonte mais sofisticada (opcional, mas recomendado) */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
 
 header {
     background-color: rgba(0, 0, 0, 0.95);
@@ -52,12 +67,18 @@ nav {
 .logo {
     display: flex;
     align-items: center;
-    gap: 15px;
+    text-decoration: none;
 }
 
 .logo-img {
-    height: 60px; /* Aumentei um pouco como você pediu */
+    display: block;
+    height: 62px; /* Aumentei um pouco como você pediu */
     transition: transform 0.3s ease;
+}
+
+.logo-full {
+    height: 120px;
+    width: auto;
 }
 
 .logo-img:hover {
@@ -65,14 +86,23 @@ nav {
 }
 
 .logo-text {
-    /* Fonte Robusta e Moderna */
-    font-family: 'Montserrat', sans-serif; 
-    font-weight: 800; /* Bem negrito */
-    font-size: 1.2rem;
-    color: #FFD700; /* Dourado Vivo */
+    display: flex;
+    flex-direction: column;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.18rem;
+    color: #f3d988;
     text-transform: uppercase;
-    letter-spacing: 4px; /* Espaço entre letras para preencher o visual */
-    margin-left: 10px;
+    letter-spacing: 0.22em;
+    line-height: 1;
+}
+
+.logo-text small {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.42em;
+    margin-top: 6px;
+    color: rgba(255, 229, 154, 0.8);
 }
 
 .nav-links {
@@ -128,8 +158,12 @@ nav {
     text-align: center;
 }
 
+.hero-content {
+    max-width: 860px;
+}
+
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin-bottom: 1.5rem;
     line-height: 1.1;
 }
@@ -143,6 +177,55 @@ nav {
     color: var(--cinza-suave);
     max-width: 700px;
     margin: 0 auto 2.5rem;
+}
+
+.section-heading {
+    margin-bottom: 28px;
+}
+
+.section-heading h2 {
+    font-size: 2rem;
+    max-width: 720px;
+}
+
+.home-preview {
+    padding-bottom: 90px;
+}
+
+.case-highlight-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+    padding: 34px;
+    border: 1px solid var(--cinza-borda);
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(212, 175, 55, 0.08));
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+.case-highlight-card h3 {
+    font-size: 1.7rem;
+    margin: 10px 0 12px;
+}
+
+.case-highlight-card p {
+    margin: 0;
+    max-width: 720px;
+    color: #b7b7b7;
+}
+
+.case-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    color: #f7de94;
+    background: rgba(212, 175, 55, 0.08);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 /* Botões */
@@ -220,7 +303,7 @@ html, body {
         transform: translate(-50%, -50%);
         width: 90%; /* Logo bem grande e impactante */
         height: 90%;
-        background-image: url('assets/img/logop_Sfundo.png');
+        background-image: url('assets/img/auryx-logo.svg');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -255,7 +338,11 @@ html, body {
 
     .logo-text {
         font-size: 1rem; /* Diminui o texto da logo no celular */
-        letter-spacing: 2px;
+        letter-spacing: 0.16em;
+    }
+
+    .logo-text small {
+        letter-spacing: 0.28em;
     }
 
     .nav-links {
@@ -283,6 +370,10 @@ html, body {
         height: 50px; /* Reduz levemente para ganhar espaço vertical */
     }
 
+    .logo-full {
+        height: 88px;
+    }
+
     /* Hero Section (A parte que estava saindo da tela) */
     .hero {
         height: auto;
@@ -305,6 +396,16 @@ html, body {
         width: 100%;
         max-width: 300px;
         margin: 0 auto;
+    }
+
+    .case-highlight-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 26px;
+    }
+
+    .section-heading h2 {
+        font-size: 1.6rem;
     }
 
     .btn {

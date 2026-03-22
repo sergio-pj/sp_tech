@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-labelledby="title desc">
+  <title id="title">AuryxTech Monograma</title>
+  <desc id="desc">Monograma AT em dourado sobre fundo transparente.</desc>
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff1b3"/>
+      <stop offset="18%" stop-color="#f4d77d"/>
+      <stop offset="45%" stop-color="#c9992e"/>
+      <stop offset="70%" stop-color="#8f6520"/>
+      <stop offset="100%" stop-color="#f6df9a"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#c9992e" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <g filter="url(#glow)">
+    <path fill="url(#gold)" d="M72 32h30l41 126h-26l-8-25H69l-8 25H35L72 32zm4 28-13 48h31L79 60h-3z"/>
+    <path fill="url(#gold)" d="M115 32h76v24h-25v102h-27V56h-24V32z"/>
+  </g>
+</svg>

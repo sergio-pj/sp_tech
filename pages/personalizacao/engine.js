@@ -10,7 +10,7 @@ function enviarWhatsApp() {
     }
 
     const mensagem = window.encodeURIComponent(
-        `*NOVO ORÇAMENTO - S.P. TECH SOLUTIONS*\n\n` +
+        `*NOVO ORÇAMENTO - AURYXTECH*\n\n` +
         `🏪 *Negócio:* ${ramo}\n` +
         `🎯 *Objetivo:* ${objetivo}\n` +
         `🎨 *Preferência de Cores:* ${cores || 'A definir'}\n\n` +
@@ -80,7 +80,7 @@ function mudarCorPreview() {
         'verde': '#2e8b57',
         'vermelho': '#b22222',
         'preto': '#1a1a1a',
-        'dourado': '#d4af37' // Cor padrão S.P. Tech
+        'dourado': '#d4af37' // Cor padrão AuryxTech
     };
 
     // Aplica a cor se encontrar a palavra-chave

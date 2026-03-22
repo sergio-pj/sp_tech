@@ -26,5 +26,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    console.log("S.P. Tech Solutions: Sistema carregado com precisão.");
+    console.log("AuryxTech: identidade carregada com sucesso.");
 });

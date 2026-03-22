@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 520" role="img" aria-labelledby="title desc">
+  <title id="title">Logo AuryxTech</title>
+  <desc id="desc">Monograma AT dourado com o nome Auryx Tech abaixo.</desc>
+  <defs>
+    <linearGradient id="goldBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff5c8"/>
+      <stop offset="20%" stop-color="#e8ca76"/>
+      <stop offset="48%" stop-color="#b9892a"/>
+      <stop offset="76%" stop-color="#73511a"/>
+      <stop offset="100%" stop-color="#f0d284"/>
+    </linearGradient>
+    <linearGradient id="goldSoft" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fae7ad"/>
+      <stop offset="100%" stop-color="#b8892d"/>
+    </linearGradient>
+    <linearGradient id="goldDark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6d4b17"/>
+      <stop offset="100%" stop-color="#c69532"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="12" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <g transform="translate(98 34)">
+      <polygon points="0,214 80,20 164,20 246,214 190,214 164,154 90,154 66,214" fill="url(#goldBase)"/>
+      <polygon points="80,20 110,66 92,110 52,72" fill="#7f5918" opacity="0.92"/>
+      <polygon points="110,66 164,20 152,82 92,110" fill="#f8e4a2" opacity="0.96"/>
+      <polygon points="52,72 92,110 84,154 28,116" fill="#bf8d2b" opacity="0.9"/>
+      <polygon points="92,110 152,82 164,154 84,154" fill="#7a541b" opacity="0.88"/>
+      <polygon points="152,82 206,54 164,154" fill="#efcf78" opacity="0.96"/>
+      <polygon points="206,54 246,214 190,214 164,154" fill="#5d3e12" opacity="0.92"/>
+      <polygon points="28,116 66,214 0,214" fill="#6f4b16" opacity="0.92"/>
+      <polygon points="90,154 66,214 190,214 164,154" fill="#cf9f3b" opacity="0.88"/>
+      <polygon points="90,154 121,116 160,154" fill="#fff0bc" opacity="0.88"/>
+      <polygon points="38,120 92,110 82,154" fill="#d7ab4c" opacity="0.72"/>
+    </g>
+
+    <g transform="translate(266 26)">
+      <polygon points="0,22 246,22 246,74 168,74 168,222 110,222 110,74 0,74" fill="url(#goldBase)"/>
+      <polygon points="0,22 44,60 110,74 0,74" fill="#7d581a" opacity="0.92"/>
+      <polygon points="44,60 148,22 246,22 168,74 110,74" fill="#f8dfa0" opacity="0.98"/>
+      <polygon points="168,74 246,22 246,74 204,116" fill="#8e651f" opacity="0.92"/>
+      <polygon points="110,74 168,74 168,222 142,194 142,116" fill="#bc8b29" opacity="0.86"/>
+      <polygon points="168,74 204,116 204,222 168,222" fill="#604115" opacity="0.92"/>
+      <polygon points="110,222 142,194 168,222" fill="#ddb55a" opacity="0.86"/>
+      <polygon points="168,74 204,116 168,118" fill="#d8ad4b" opacity="0.76"/>
+    </g>
+
+    <path d="M214 138 L314 94" stroke="url(#goldDark)" stroke-width="20" stroke-linecap="round" opacity="0.92"/>
+    <path d="M230 156 L324 116" stroke="#fbe9ad" stroke-width="7" stroke-linecap="round" opacity="0.72"/>
+
+    <g fill="url(#goldSoft)" font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
+      <text x="310" y="352" font-size="84" font-weight="700" letter-spacing="8">AURYX</text>
+      <text x="310" y="414" font-size="50" font-weight="700" letter-spacing="9">TECH</text>
+    </g>
+  </g>
+</svg>
