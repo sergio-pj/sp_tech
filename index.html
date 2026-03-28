@@ -40,18 +40,95 @@
     <section class="container home-preview">
         <div class="section-heading">
             <p class="eyebrow">Portfólio</p>
-            <h2>Projetos entregues com foco em clareza, desempenho e conversão</h2>
+            <h2>Cases pensados para mostrar problema, solução e valor entregue em cada projeto</h2>
+        </div>
+
+        <div class="case-grid">
+            <article class="portfolio-card">
+                <span class="case-badge">Case 01</span>
+                <h3>Loja virtual Aranha</h3>
+                <div class="card-copy">
+                    <p><strong>Problema:</strong> a marca precisava sair de uma presença simples para uma vitrine digital com mais valor percebido.</p>
+                    <p><strong>Solução:</strong> foi criada uma experiência com catálogo, páginas de produto, carrinho e identidade visual mais forte.</p>
+                </div>
+                <div class="card-actions">
+                    <a href="https://loja-roupas-ashy.vercel.app/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Ver Demo</a>
+                </div>
+            </article>
+
+            <article class="portfolio-card">
+                <span class="case-badge">Case 02</span>
+                <h3>Sistema para salão</h3>
+                <div class="card-copy">
+                    <p><strong>Problema:</strong> o agendamento dependia de contato manual, sem validação de horários disponíveis e sem fluxo de confirmação.</p>
+                    <p><strong>Solução:</strong> a próxima versão vai conectar formulário, agenda no Supabase e confirmação por WhatsApp em um fluxo mais profissional.</p>
+                </div>
+                <div class="card-actions">
+                    <a href="https://meu-salao-app.vercel.app" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Ver Demo</a>
+                </div>
+            </article>
+
+            <article class="portfolio-card portfolio-card-featured">
+                <span class="case-badge">Case 03</span>
+                <h3>Sistema de gestão de pedidos</h3>
+                <div class="card-copy">
+                    <p><strong>Problema:</strong> o cliente precisava demonstrar o sistema sem expor funções críticas como edição e exclusão de dados reais.</p>
+                    <p><strong>Solução:</strong> o portfólio agora prepara um acesso demo guiado, com credenciais de teste e entrada rápida para apresentação comercial.</p>
+                </div>
+                <div class="card-actions">
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-modal-open
+                        data-demo-title="Demo do sistema de gestão"
+                        data-demo-email="teste@auryxtech.com.br"
+                        data-demo-password="teste123"
+                        data-demo-url="https://personaliza-mu.vercel.app/login.html"
+                    >Ver Demo</button>
+                </div>
+            </article>
         </div>
 
         <article class="case-highlight-card">
             <div>
-                <span class="case-badge">Primeiro projeto entregue</span>
-                <h3>Projeto Aranha, loja virtual de roupas</h3>
-                <p>O primeiro case agora aponta para o projeto real publicado: uma vitrine digital de moda com catálogo, carrinho, área do cliente, newsletter e reforço de identidade da marca.</p>
+                <span class="case-badge">Portfólio comercial</span>
+                <h3>Os próximos dois sistemas já têm espaço reservado dentro da AuryxTech</h3>
+                <p>A home agora apresenta os três produtos principais da empresa e prepara o terreno para conectar as demos reais do salão e da gestão de pedidos assim que essas pastas estiverem no workspace.</p>
             </div>
             <a href="pages/cases/index.html" class="btn btn-primary">Abrir área de cases</a>
         </article>
     </section>
+
+    <div class="modal-overlay" id="demo-modal" aria-hidden="true">
+        <div class="demo-modal" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title">
+            <button type="button" class="modal-close" data-modal-close aria-label="Fechar modal">&times;</button>
+            <p class="eyebrow">Acesso de demonstração</p>
+            <h2 id="demo-modal-title">Demo do sistema</h2>
+            <p class="modal-description">A demo agora abre em modo guiado: o login entra preenchido automaticamente e a conta teste e limpa ao encerrar a sessao.</p>
+
+            <div class="demo-flow-card">
+                <div class="demo-flow-step">
+                    <span>1</span>
+                    <p>Abra a demo guiada e entre direto na tela de login preparada para apresentação.</p>
+                </div>
+                <div class="demo-flow-step">
+                    <span>2</span>
+                    <p>O e-mail e a senha de teste já vão preenchidos automaticamente.</p>
+                </div>
+                <div class="demo-flow-step">
+                    <span>3</span>
+                    <p>Ao sair da conta demo, os dados criados durante a visita são limpos para o próximo cliente.</p>
+                </div>
+            </div>
+
+            <p class="demo-manual-note">Acesso manual de apoio: <strong id="demo-email">teste@auryxtech.com.br</strong>. <span id="demo-password" class="visually-hidden">teste123</span></p>
+
+            <div class="modal-actions">
+                <a href="https://personaliza-mu.vercel.app/login.html" class="btn btn-primary" id="demo-link" target="_blank" rel="noopener noreferrer">Abrir login da demo</a>
+                <button type="button" class="btn btn-secondary" data-copy-credentials>Copiar acesso manual</button>
+            </div>
+        </div>
+    </div>
 
     <footer class="container">
         <p>&copy; 2026 AuryxTech</p>
